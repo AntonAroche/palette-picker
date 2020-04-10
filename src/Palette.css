@@ -1,0 +1,9 @@
+.Palette-colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Palette-colorbox {
+  width: 25em;
+  height: 15em;
+}
