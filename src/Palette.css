@@ -1,9 +1,7 @@
-.Palette-colors {
-  display: flex;
-  flex-wrap: wrap;
+.Palette {
+  height: 100vh;
 }
 
-.Palette-colorbox {
-  width: 25em;
-  height: 15em;
+.Palette-colors {
+  height: 90%;
 }

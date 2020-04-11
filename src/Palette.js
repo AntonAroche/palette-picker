@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./Palette.css";
+import ColorBox from "./ColorBox"
 
 class Palette extends Component {
   state = {};
   render() {
-    const { paletteName, id, emoji, colors } = this.props;
+    const { paletteName, emoji, colors } = this.props;
 
     return (
       <div className="Palette">
@@ -12,12 +13,7 @@ class Palette extends Component {
         <div className="Palette-colors">
           {colors.map((c) => {
             return (
-              <div
-                className="Palette-colorbox"
-                style={{ backgroundColor: c.color }}
-              >
-                <span>{c.name}</span>
-              </div>
+              <ColorBox {...c} />
             );
           })}
         </div>
