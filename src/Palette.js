@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "rc-slider/assets/index.css";
 import "./Palette.css";
 import ColorBox from "./ColorBox";
-import Slider from "rc-slider";
+import Navbar from "./Navbar"
 
 class Palette extends Component {
   state = {
@@ -19,16 +19,8 @@ class Palette extends Component {
     });
     return (
       <div className="Palette">
+        <Navbar level={level} changeLevel={this.changeLevel} />
         <h1>{`${paletteName} ${emoji}`}</h1>
-        <div className="slider">
-          <Slider
-            defaultValue={level}
-            min={100}
-            max={900}
-            step={100}
-            onAfterChange={this.changeLevel}
-          />
-        </div>
         <div className="Palette-colors">{renderBoxes}</div>
       </div>
     );
