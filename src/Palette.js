@@ -30,7 +30,6 @@ class Palette extends Component {
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
         />
-        <h1>{`${paletteName} ${emoji}`}</h1>
         <div className="Palette-colors">{renderBoxes}</div>
       </div>
     );
