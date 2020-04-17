@@ -5,6 +5,7 @@ import seedPalettes from "./seedPalettes";
 import { generatePalette } from "./colorHelpers";
 import PaletteList from "./PaletteList";
 import SingleColorPalette from "./SingleColorPalette";
+import NewPaletteForm from "./NewPaletteForm";
 
 class App extends Component {
   findPalette(id) {
@@ -23,6 +24,7 @@ class App extends Component {
             <PaletteList palettes={seedPalettes} {...routeProps} />
           )}
         />
+        <Route exact path="/palette/new" render={() => <NewPaletteForm />} />
         <Route
           exact
           path="/palette/:id"
