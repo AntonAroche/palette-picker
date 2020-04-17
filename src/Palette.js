@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "rc-slider/assets/index.css";
-import "./Palette.css";
 import ColorBox from "./ColorBox";
 import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
+import { withStyles } from "@material-ui/styles";
+import styles from "./styles/PaletteStyles"
 
 class Palette extends Component {
   state = {
@@ -19,6 +20,7 @@ class Palette extends Component {
   };
 
   render() {
+    const { classes } = this.props;
     const { paletteName, emoji, colors, id } = this.props.palette;
     const { level, format } = this.state;
     const renderBoxes = colors[level].map((c) => {
@@ -28,23 +30,23 @@ class Palette extends Component {
           color={c[format]}
           key={c.id}
           moreUrl={`/palette/${id}/${c.id}`}
-          showLink
+          showingFullPalette
         />
       );
     });
     return (
-      <div className="Palette">
+      <div className={classes.Palette}>
         <Navbar
           level={level}
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
           showSlider
         />
-        <div className="Palette-colors">{renderBoxes}</div>
+        <div className={classes.colors}>{renderBoxes}</div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
     );
   }
 }
 
-export default Palette;
+export default withStyles(styles)(Palette);
