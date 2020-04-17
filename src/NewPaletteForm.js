@@ -82,15 +82,21 @@ class NewPaletteForm extends Component {
         ({ name }) => name.toLowerCase() !== value.toLowerCase()
       )
     );
-    ValidatorForm.addValidationRule("isColorUnique", (value) =>
+    ValidatorForm.addValidationRule("isColorUnique", () =>
       this.state.colors.every(({ color }) => color !== this.state.currentColor)
+    );
+    ValidatorForm.addValidationRule("isPaletteNameUnique", (value) =>
+      this.props.palettes.every(
+        ({ paletteName }) => paletteName.toLowerCase() !== value.toLowerCase()
+      )
     );
   }
   state = {
     open: true,
     currentColor: "teal",
     colors: [],
-    newName: "",
+    newColorName: "",
+    newPaletteName: "",
   };
 
   handleDrawerOpen = () => {
@@ -106,25 +112,44 @@ class NewPaletteForm extends Component {
   };
 
   addNewColor = () => {
+    const { newColorName, currentColor, colors } = this.state;
     const newColor = {
-      color: this.state.currentColor,
-      name: this.state.newName,
+      color: currentColor,
+      name: newColorName,
     };
-    this.setState({ colors: [...this.state.colors, newColor], newName: "" });
+    this.setState({ colors: [...colors, newColor], newColorName: "" });
   };
 
   handleNameChange = (evt) => {
-    this.setState({ newName: evt.target.value });
+    this.setState({ [evt.target.name]: evt.target.value });
   };
+
+  handleSubmit = () => {
+    const { newPaletteName, colors } = this.state;
+    const newPalette = {
+      paletteName: newPaletteName,
+      id: newPaletteName.toLowerCase().replace(/ /g, "-"),
+      colors: colors,
+    };
+    this.props.savePalette(newPalette);
+    this.props.history.push("/");
+  };
+
+  removeColor(colorName) {
+    this.setState({
+      colors: this.state.colors.filter((color) => color.name !== colorName),
+    });
+  }
 
   render() {
     const { classes } = this.props;
-    const { open, colors, currentColor, newName } = this.state;
+    const { open, colors, currentColor, newColorName } = this.state;
     return (
       <div className={classes.root}>
         <CssBaseline />
         <AppBar
           position="fixed"
+          color="default"
           className={classNames(classes.appBar, {
             [classes.appBarShift]: open,
           })}
@@ -141,6 +166,19 @@ class NewPaletteForm extends Component {
             <Typography variant="h6" color="inherit" noWrap>
               Persistent drawer
             </Typography>
+            <ValidatorForm onSubmit={this.handleSubmit}>
+              <TextValidator
+                label="Palette Name"
+                name="newPaletteName"
+                value={this.state.newPaletteName}
+                onChange={this.handleNameChange}
+                validators={["required", "isPaletteNameUnique"]}
+                errorMessages={["Enter Palette Name", "Name already used"]}
+              />
+              <Button variant="contained" color="primary" type="submit">
+                Save Palette
+              </Button>
+            </ValidatorForm>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -173,11 +211,12 @@ class NewPaletteForm extends Component {
           />
           <ValidatorForm onSubmit={this.addNewColor}>
             <TextValidator
-              value={newName}
+              value={newColorName}
+              name="newColorName"
               onChange={this.handleNameChange}
               validators={["required", "isColorNameUnique", "isColorUnique"]}
               errorMessages={[
-                "You must enter a name",
+                "Enter Color name",
                 "Color name must be unique",
                 "The color must be unique",
               ]}
@@ -199,7 +238,12 @@ class NewPaletteForm extends Component {
         >
           <div className={classes.drawerHeader} />
           {colors.map((color) => (
-            <DraggableColorbox color={color.color} name={color.name} />
+            <DraggableColorbox
+              key={color.name}
+              color={color.color}
+              name={color.name}
+              handleClick={() => this.removeColor(color.name)}
+            />
           ))}
         </main>
       </div>
