@@ -28,6 +28,10 @@ class SingleColorPalette extends Component {
     this.setState({ format: format });
   };
 
+  goBack = () => {
+    this.props.history.goBack()
+  }
+
   render() {
     const { format } = this.state;
     const { paletteName, emoji, id } = this.props.palette;
@@ -46,10 +50,8 @@ class SingleColorPalette extends Component {
         <Navbar showSlider={false} handleChange={this.changeFormat} />
         <div className={classes.colors}>
           {colorBoxes}
-          <div className={classes.goBack}>
-            <Link to={`/palette/${id}`} className="back-button">
-              GO BACK
-            </Link>
+          <div className={classes.goBack} onClick={this.goBack}>
+            <Link to={`/palette/${id}`}>GO BACK</Link>
           </div>
         </div>
         <PaletteFooter paletteName={paletteName} emoji={emoji} />
