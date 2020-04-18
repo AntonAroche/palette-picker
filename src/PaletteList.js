@@ -6,6 +6,8 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CheckIcon from "@material-ui/icons/Check";
 import CloseIcon from "@material-ui/icons/Close";
+import AddIcon from "@material-ui/icons/Add";
+import RestoreIcon from "@material-ui/icons/Restore";
 import {
   List,
   ListItem,
@@ -14,32 +16,55 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import blue from "@material-ui/core/colors/blue";
+import green from "@material-ui/core/colors/green";
 import red from "@material-ui/core/colors/red";
 import MiniPalette from "./MiniPalette";
 import styles from "./styles/PaletteListStyles";
 
 class PaletteList extends Component {
-  state = {
-    deleteDialogOpen: false,
-    paletteToDeleteId: "",
-  };
+  constructor(props) {
+    super(props);
+    const noPalettes = this.props.palettes.length === 0;
+    this.state = {
+      dialogOpen: noPalettes ? "noPalettes" : "",
+      paletteToDeleteId: "",
+    };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.palettes.length > 0 && this.props.palettes.length === 0) {
+      this.setState({ dialogOpen: "noPalettes" });
+    }
+  }
   goToPalette = (id) => {
     this.props.history.push(`/palette/${id}`);
   };
+
   handleDelete = () => {
     this.props.handleDelete(this.state.paletteToDeleteId);
-    this.setState({ deleteDialogOpen: false });
+    this.setState({ dialogOpen: "" });
   };
-  openDialog = (id) => {
-    this.setState({ paletteToDeleteId: id, deleteDialogOpen: true });
+
+  createPalette = () => {
+    this.setState({ dialogOpen: "" });
+    this.props.history.push("/palette/new");
+  };
+
+  restorePalettes = () => {
+    this.setState({ dialogOpen: "" });
+    this.props.restorePalettes();
+  };
+  openDeleteDialog = (id) => {
+    this.setState({ paletteToDeleteId: id, dialogOpen: "delete" });
   };
 
   closeDialog = () => {
-    this.setState({ deleteDialogOpen: false });
+    this.setState({ dialogOpen: "" });
   };
+
   render() {
     const { palettes, classes } = this.props;
-    const { deleteDialogOpen } = this.state;
+    const { dialogOpen } = this.state;
     return (
       <div className={classes.root}>
         <div className={classes.container}>
@@ -53,7 +78,7 @@ class PaletteList extends Component {
                 <MiniPalette
                   {...palette}
                   goToPalette={this.goToPalette}
-                  handleDelete={this.openDialog}
+                  handleDelete={this.openDeleteDialog}
                   key={palette.id}
                 />
               </CSSTransition>
@@ -61,7 +86,7 @@ class PaletteList extends Component {
           </TransitionGroup>
         </div>
         <Dialog
-          open={deleteDialogOpen}
+          open={dialogOpen === "delete"}
           aria-labelledby="delete-dialog-title"
           onClose={this.closeDialog}
         >
@@ -86,6 +111,37 @@ class PaletteList extends Component {
                 </Avatar>
               </ListItemAvatar>
               <ListItemText>Cancel</ListItemText>
+            </ListItem>
+          </List>
+        </Dialog>
+        <Dialog
+          open={dialogOpen === "noPalettes"}
+          aria-labelledby="no-palette-dialog-title"
+          onClose={this.closeDialog}
+        >
+          <DialogTitle id="no-palette-dialog-title">
+            You have no palettes!
+          </DialogTitle>
+          <List>
+            <ListItem button onClick={this.createPalette}>
+              <ListItemAvatar>
+                <Avatar
+                  style={{ backgroundColor: green[100], color: green[600] }}
+                >
+                  <AddIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText>Create New Palette</ListItemText>
+            </ListItem>
+            <ListItem button onClick={this.restorePalettes}>
+              <ListItemAvatar>
+                <Avatar
+                  style={{ backgroundColor: blue[100], color: blue[600] }}
+                >
+                  <RestoreIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText>Restore Default Palettes</ListItemText>
             </ListItem>
           </List>
         </Dialog>

@@ -26,6 +26,11 @@ const styles = (theme) => ({
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    "& button": {
+      [sizes.down("sm")]: {
+        display: "none",
+      },
+    },
   },
   menuButton: {
     marginLeft: 12,
@@ -42,8 +47,9 @@ const styles = (theme) => ({
   },
   button: {
     margin: "0 0.5rem",
-    [sizes.down("xs")]: {
-      margin: 0,
+    [sizes.down("md")]: {
+      margin: "0 0.2rem",
+      padding: "0.3rem",
     },
   },
 });

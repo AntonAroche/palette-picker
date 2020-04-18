@@ -36,12 +36,17 @@ class App extends Component {
     );
   };
 
+  restorePalettes = () => {
+    this.setState({ palettes: seedPalettes }, this.syncLocalStorage);
+  };
+
   syncLocalStorage() {
     window.localStorage.setItem(
       "palettes",
       JSON.stringify(this.state.palettes)
     );
   }
+
   render() {
     const { palettes } = this.state;
     return (
@@ -58,6 +63,7 @@ class App extends Component {
                       <PaletteList
                         palettes={palettes}
                         handleDelete={this.handleDelete}
+                        restorePalettes={this.restorePalettes}
                         {...routeProps}
                       />
                     </Page>
