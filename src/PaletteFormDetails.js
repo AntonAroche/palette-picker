@@ -33,6 +33,7 @@ class PaletteFormDetails extends Component {
       emoji: emoji.native,
     };
     this.props.handleSubmit(newPalette);
+    this.setState({stage: ""})
   };
   showEmojiPicker = () => {
     this.setState({
