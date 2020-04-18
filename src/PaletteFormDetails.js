@@ -33,7 +33,7 @@ class PaletteFormDetails extends Component {
       emoji: emoji.native,
     };
     this.props.handleSubmit(newPalette);
-    this.setState({stage: ""})
+    this.setState({ stage: "" });
   };
   showEmojiPicker = () => {
     this.setState({
@@ -48,9 +48,10 @@ class PaletteFormDetails extends Component {
 
   render() {
     const { newPaletteName, stage } = this.state;
+    const { hideForm } = this.props;
     return (
       <div>
-        <Dialog open={stage === "emoji"} onClose={this.props.hideForm}>
+        <Dialog open={stage === "emoji"} onClose={hideForm}>
           <DialogTitle id="form-dialog-title">
             Choose a Palette Emoji!
           </DialogTitle>
@@ -58,7 +59,7 @@ class PaletteFormDetails extends Component {
         </Dialog>
         <Dialog
           open={stage === "form"}
-          onClose={this.props.hideForm}
+          onClose={hideForm}
           aria-labelledby="form-dialog-title"
         >
           <DialogTitle id="form-dialog-title">
@@ -85,7 +86,7 @@ class PaletteFormDetails extends Component {
               <Button variant="contained" color="primary" type="submit">
                 Save Palette
               </Button>
-              <Button onClick={this.props.hideForm} color="primary">
+              <Button onClick={hideForm} color="primary">
                 Cancel
               </Button>
             </DialogActions>
