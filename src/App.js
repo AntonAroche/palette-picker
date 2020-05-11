@@ -50,7 +50,6 @@ class App extends Component {
   render() {
     const { palettes } = this.state;
     return (
-      <HashRouter basename="/">
         <Route
           render={({ location }) => (
             <TransitionGroup>
@@ -127,7 +126,6 @@ class App extends Component {
             </TransitionGroup>
           )}
         />
-      </HashRouter>
     );
   }
 }
