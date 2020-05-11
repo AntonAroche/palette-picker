@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab34d074f6507100680d65bbcb8fb7dd",
+    "revision": "7f62238f11f3abd6ce5b275c88ec17de",
     "url": "/palette-picker/index.html"
   },
   {
-    "revision": "1dcc13480c48bd1ed342",
+    "revision": "ffaded5324a8afe78409",
     "url": "/palette-picker/static/css/2.7095f003.chunk.css"
   },
   {
-    "revision": "b7b6defc227050fc87c6",
+    "revision": "ffbb8d4aa530a4c4924d",
     "url": "/palette-picker/static/css/main.5029bbcc.chunk.css"
   },
   {
-    "revision": "1dcc13480c48bd1ed342",
-    "url": "/palette-picker/static/js/2.a967590b.chunk.js"
+    "revision": "ffaded5324a8afe78409",
+    "url": "/palette-picker/static/js/2.693edf72.chunk.js"
   },
   {
     "revision": "aa6c723bcb7bf9a4c546b6aa137fdb1e",
-    "url": "/palette-picker/static/js/2.a967590b.chunk.js.LICENSE.txt"
+    "url": "/palette-picker/static/js/2.693edf72.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b7b6defc227050fc87c6",
-    "url": "/palette-picker/static/js/main.d2fd1893.chunk.js"
+    "revision": "ffbb8d4aa530a4c4924d",
+    "url": "/palette-picker/static/js/main.1eab3f59.chunk.js"
   },
   {
     "revision": "4a36d647431cce2b4b0f",
