@@ -2,7 +2,7 @@
 
 - A combination of [Flat UI Colors](https://flatuicolors.com/) and [Material UI Colors](http://materialuicolors.co/?utm_source=launchers) tools.
 - This site allows users to create and save color palettes for use in web development.
-- I completed this project as part of The Modern React Bootcamp by Colt Steele, and added my own touches to it.
+- Check it out at https://antonaroche.github.io/palette-picker !
 
 ![Palette Picker](./images/MainScreen.png)
 
