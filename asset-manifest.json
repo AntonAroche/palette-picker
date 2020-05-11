@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/palette-picker/static/css/main.5029bbcc.chunk.css",
-    "main.js": "/palette-picker/static/js/main.166812e4.chunk.js",
-    "main.js.map": "/palette-picker/static/js/main.166812e4.chunk.js.map",
+    "main.js": "/palette-picker/static/js/main.3568a303.chunk.js",
+    "main.js.map": "/palette-picker/static/js/main.3568a303.chunk.js.map",
     "runtime-main.js": "/palette-picker/static/js/runtime-main.ebb428f6.js",
     "runtime-main.js.map": "/palette-picker/static/js/runtime-main.ebb428f6.js.map",
     "static/css/2.7095f003.chunk.css": "/palette-picker/static/css/2.7095f003.chunk.css",
     "static/js/2.8cda67f9.chunk.js": "/palette-picker/static/js/2.8cda67f9.chunk.js",
     "static/js/2.8cda67f9.chunk.js.map": "/palette-picker/static/js/2.8cda67f9.chunk.js.map",
     "index.html": "/palette-picker/index.html",
-    "precache-manifest.cefd64a61da72e818e47fc6fd03cddb2.js": "/palette-picker/precache-manifest.cefd64a61da72e818e47fc6fd03cddb2.js",
+    "precache-manifest.0abfe769fa2172b2f60b5af8f86f2a88.js": "/palette-picker/precache-manifest.0abfe769fa2172b2f60b5af8f86f2a88.js",
     "service-worker.js": "/palette-picker/service-worker.js",
     "static/css/2.7095f003.chunk.css.map": "/palette-picker/static/css/2.7095f003.chunk.css.map",
     "static/css/main.5029bbcc.chunk.css.map": "/palette-picker/static/css/main.5029bbcc.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.7095f003.chunk.css",
     "static/js/2.8cda67f9.chunk.js",
     "static/css/main.5029bbcc.chunk.css",
-    "static/js/main.166812e4.chunk.js"
+    "static/js/main.3568a303.chunk.js"
   ]
 }
