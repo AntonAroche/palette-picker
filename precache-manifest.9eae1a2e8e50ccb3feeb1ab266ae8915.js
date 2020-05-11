@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7c43b7c5fb9b0d97fc0a",
+    "revision": "681d3360d12471255ee0",
     "url": "/palette-picker/static/css/main.ef271b3e.chunk.css"
   },
   {
-    "revision": "7c43b7c5fb9b0d97fc0a",
-    "url": "/palette-picker/static/js/main.6a87cb97.chunk.js"
+    "revision": "681d3360d12471255ee0",
+    "url": "/palette-picker/static/js/main.455ed870.chunk.js"
   },
   {
     "revision": "44429c3ded9afb108171",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/palette-picker/static/media/bg.61edda80.svg"
   },
   {
-    "revision": "dfc47465fe594d015613785f5be14ae1",
+    "revision": "5e230311a33495291b032a948e7428a6",
     "url": "/palette-picker/index.html"
   }
 ];
