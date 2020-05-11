@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "082b3478f1b8bd6a8c45d890d1eb22d9",
+    "revision": "ab34d074f6507100680d65bbcb8fb7dd",
     "url": "/palette-picker/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/palette-picker/static/css/2.7095f003.chunk.css"
   },
   {
-    "revision": "39f884e9b2b40989dc09",
+    "revision": "b7b6defc227050fc87c6",
     "url": "/palette-picker/static/css/main.5029bbcc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/palette-picker/static/js/2.a967590b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "39f884e9b2b40989dc09",
-    "url": "/palette-picker/static/js/main.05f15a29.chunk.js"
+    "revision": "b7b6defc227050fc87c6",
+    "url": "/palette-picker/static/js/main.d2fd1893.chunk.js"
   },
   {
     "revision": "4a36d647431cce2b4b0f",
