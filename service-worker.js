@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "antonaroche.github.io/palette-picker/precache-manifest.4cea56144e6fc460d1fe96708f659960.js"
+  "antonaroche.github.io/palette-picker/precache-manifest.e1fa82a1fcf3c6af4b6b1ada7a58b447.js"
 );
 
 workbox.clientsClaim();
