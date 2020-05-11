@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "antonaroche.github.io/palette-picker/precache-manifest.e1fa82a1fcf3c6af4b6b1ada7a58b447.js"
+  "/palette-picker/precache-manifest.f3dff982b2c1336e03bb727d5dd72ba6.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("antonaroche.github.io/palette-picker/index.html", {
+workbox.routing.registerNavigationRoute("/palette-picker/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
