@@ -1,26 +1,16 @@
 {
-  "files": {
-    "main.css": "/palette-picker/static/css/main.5029bbcc.chunk.css",
-    "main.js": "/palette-picker/static/js/main.1eab3f59.chunk.js",
-    "main.js.map": "/palette-picker/static/js/main.1eab3f59.chunk.js.map",
-    "runtime-main.js": "/palette-picker/static/js/runtime-main.ebb428f6.js",
-    "runtime-main.js.map": "/palette-picker/static/js/runtime-main.ebb428f6.js.map",
-    "static/css/2.7095f003.chunk.css": "/palette-picker/static/css/2.7095f003.chunk.css",
-    "static/js/2.693edf72.chunk.js": "/palette-picker/static/js/2.693edf72.chunk.js",
-    "static/js/2.693edf72.chunk.js.map": "/palette-picker/static/js/2.693edf72.chunk.js.map",
-    "index.html": "/palette-picker/index.html",
-    "precache-manifest.ecd37de8395d7d40e4b6bc7b40845b26.js": "/palette-picker/precache-manifest.ecd37de8395d7d40e4b6bc7b40845b26.js",
-    "service-worker.js": "/palette-picker/service-worker.js",
-    "static/css/2.7095f003.chunk.css.map": "/palette-picker/static/css/2.7095f003.chunk.css.map",
-    "static/css/main.5029bbcc.chunk.css.map": "/palette-picker/static/css/main.5029bbcc.chunk.css.map",
-    "static/js/2.693edf72.chunk.js.LICENSE.txt": "/palette-picker/static/js/2.693edf72.chunk.js.LICENSE.txt",
-    "static/media/bg.svg": "/palette-picker/static/media/bg.61edda80.svg"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.ebb428f6.js",
-    "static/css/2.7095f003.chunk.css",
-    "static/js/2.693edf72.chunk.js",
-    "static/css/main.5029bbcc.chunk.css",
-    "static/js/main.1eab3f59.chunk.js"
-  ]
+  "main.css": "antonaroche.github.io/palette-picker/static/css/main.ef271b3e.chunk.css",
+  "main.js": "antonaroche.github.io/palette-picker/static/js/main.2796d26b.chunk.js",
+  "main.js.map": "antonaroche.github.io/palette-picker/static/js/main.2796d26b.chunk.js.map",
+  "runtime~main.js": "antonaroche.github.io/palette-picker/static/js/runtime~main.5cb3c310.js",
+  "runtime~main.js.map": "antonaroche.github.io/palette-picker/static/js/runtime~main.5cb3c310.js.map",
+  "static/css/2.ecfda0a9.chunk.css": "antonaroche.github.io/palette-picker/static/css/2.ecfda0a9.chunk.css",
+  "static/js/2.9777d713.chunk.js": "antonaroche.github.io/palette-picker/static/js/2.9777d713.chunk.js",
+  "static/js/2.9777d713.chunk.js.map": "antonaroche.github.io/palette-picker/static/js/2.9777d713.chunk.js.map",
+  "index.html": "antonaroche.github.io/palette-picker/index.html",
+  "precache-manifest.4cea56144e6fc460d1fe96708f659960.js": "antonaroche.github.io/palette-picker/precache-manifest.4cea56144e6fc460d1fe96708f659960.js",
+  "service-worker.js": "antonaroche.github.io/palette-picker/service-worker.js",
+  "static/css/2.ecfda0a9.chunk.css.map": "antonaroche.github.io/palette-picker/static/css/2.ecfda0a9.chunk.css.map",
+  "static/css/main.ef271b3e.chunk.css.map": "antonaroche.github.io/palette-picker/static/css/main.ef271b3e.chunk.css.map",
+  "static/media/bg.svg": "antonaroche.github.io/palette-picker/static/media/bg.61edda80.svg"
 }
