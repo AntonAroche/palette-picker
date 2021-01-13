@@ -1,16 +1,16 @@
 {
-  "main.css": "/palette-picker/static/css/main.ef271b3e.chunk.css",
-  "main.js": "/palette-picker/static/js/main.2fd115a9.chunk.js",
-  "main.js.map": "/palette-picker/static/js/main.2fd115a9.chunk.js.map",
+  "main.css": "/palette-picker/static/css/main.3c725adb.chunk.css",
+  "main.js": "/palette-picker/static/js/main.8033bee7.chunk.js",
+  "main.js.map": "/palette-picker/static/js/main.8033bee7.chunk.js.map",
   "runtime~main.js": "/palette-picker/static/js/runtime~main.e6cb6495.js",
   "runtime~main.js.map": "/palette-picker/static/js/runtime~main.e6cb6495.js.map",
-  "static/css/2.ecfda0a9.chunk.css": "/palette-picker/static/css/2.ecfda0a9.chunk.css",
+  "static/css/2.553f0c5a.chunk.css": "/palette-picker/static/css/2.553f0c5a.chunk.css",
   "static/js/2.edecd18f.chunk.js": "/palette-picker/static/js/2.edecd18f.chunk.js",
   "static/js/2.edecd18f.chunk.js.map": "/palette-picker/static/js/2.edecd18f.chunk.js.map",
   "index.html": "/palette-picker/index.html",
-  "precache-manifest.e96af85a664bdcd8d080470793f28920.js": "/palette-picker/precache-manifest.e96af85a664bdcd8d080470793f28920.js",
+  "precache-manifest.10e73ecacf6a9fe69a51cfd340d07806.js": "/palette-picker/precache-manifest.10e73ecacf6a9fe69a51cfd340d07806.js",
   "service-worker.js": "/palette-picker/service-worker.js",
-  "static/css/2.ecfda0a9.chunk.css.map": "/palette-picker/static/css/2.ecfda0a9.chunk.css.map",
-  "static/css/main.ef271b3e.chunk.css.map": "/palette-picker/static/css/main.ef271b3e.chunk.css.map",
+  "static/css/2.553f0c5a.chunk.css.map": "/palette-picker/static/css/2.553f0c5a.chunk.css.map",
+  "static/css/main.3c725adb.chunk.css.map": "/palette-picker/static/css/main.3c725adb.chunk.css.map",
   "static/media/bg.svg": "/palette-picker/static/media/bg.61edda80.svg"
 }
